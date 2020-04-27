@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  <body>
+  		<h1>Bienvenue à toi utilisateurs du web</h1>
+   	 	<h2>Tu veux assouvir des envies de gossip hein? </h2>
+		<p>
+			la liste des potins arrive bientôt, et qu'en attendant tu peux aller créer 
+			<a href="/gossips/new/">un nouveau potin.</a>	
+		</p>
+		   <%#on intégre le fichier l'array all gossip construit dans gossip.rb et qui reprend les gossips + auteurs %>
+		
+
+
+		<% gossips.each do |gossip| %>
+        <p>
+          <%= gossip.author %><br/>
+          <%= gossip.content %>
+        </p>
+      <% end %>
+
+  </body>
+</html>
